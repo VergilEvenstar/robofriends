@@ -4,6 +4,7 @@ import CardList from "../Components/CardList";
 import SearchBox from "../Components/SearchBox";
 import Scroll from '../Components/Scroll';
 import ErrorBoundry from "../Components/ErrorBoundry";
+import Header from "../Components/Header";
 import './App.css';
 import { setSearchField, callRobotsApi } from '../actions';
 
@@ -38,7 +39,7 @@ class App extends React.Component {
         return isPending ? <h1>Loading...</h1> :
             (
                 <div className='tc'>
-                    <h1 className="f1">RoboFriends</h1>
+                    <Header />
                     <SearchBox searchField={searchField} searchChange={onSearchChange} />
                     <Scroll>
                         <ErrorBoundry>
